@@ -37,15 +37,14 @@ public class UserController {
     }
 
 
-    @GetMapping("/user/{id}")
-    public ResponseEntity<User> registerCar(@PathVariable int id) {
-
-        User user = userServive.getUserById(id);
-
-        if(user.getId() == 0) return new ResponseEntity<>(response, status);
-        else return new ResponseEntity<>(response, status);
-    }
-
+//    @GetMapping("/user/{id}")
+//    public ResponseEntity<User> registerCar(@PathVariable int id) {
+//
+//        User user = userServive.getUserById(id);
+//
+//        if(user.getId() == 0) return new ResponseEntity<>(response, status);
+//        else return new ResponseEntity<>(response, status);
+//    }
 
 
 
