@@ -37,19 +37,34 @@ public class UserController {
     }
 
 
-//    @GetMapping("/user/{id}")
-//    public ResponseEntity<User> registerCar(@PathVariable int id) {
-//
-//        User user = userServive.getUserById(id);
-//
-//        if(user.getId() == 0) return new ResponseEntity<>(response, status);
-//        else return new ResponseEntity<>(response, status);
-//    }
+    @GetMapping("/user/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable int id) {
 
+        User user = userServive.getUserById(id);
 
+        if(user.getId() != 0) return new ResponseEntity<>(user, HttpStatus.OK);
+        else return new ResponseEntity<>(user, HttpStatus.NO_CONTENT);
+    }
 
+    @PostMapping("/user/update/{id}")
+    public ResponseEntity<String> updateUser(@RequestBody User user, @PathVariable int id) {
 
+        String response = userServive.updateUser(user,id);
+        HttpStatus status = checkHttpStatus(response);
 
+        if(status == HttpStatus.OK) return new ResponseEntity<>(response, status);
+        else return new ResponseEntity<>(response, status);
+    }
+
+    @DeleteMapping("/user/delete/{id}")
+    public ResponseEntity<String> deleteUserById(@PathVariable int id) {
+
+        String response = userServive.deleteUserById(id);
+        HttpStatus status = checkHttpStatus(response);
+
+        if(status == HttpStatus.OK) return new ResponseEntity<>(response, status);
+        else return new ResponseEntity<>(response, status);
+    }
 
     private HttpStatus checkHttpStatus(String response){
 

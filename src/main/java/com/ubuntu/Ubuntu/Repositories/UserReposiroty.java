@@ -76,7 +76,7 @@ public class UserReposiroty {
     }
 
 
-    public String updateUser(User user, Long id){
+    public String updateUser(User user, int id){
 
         if(user.getName() == null || user.getEmail() == null) return "Invalid data";
 

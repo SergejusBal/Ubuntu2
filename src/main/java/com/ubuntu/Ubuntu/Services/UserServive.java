@@ -24,7 +24,7 @@ public class UserServive {
         return userReposiroty.getUserById(id);
     }
 
-    public String updateUser(User user, Long id){
+    public String updateUser(User user, int id){
         return userReposiroty.updateUser(user, id);
     }
 

@@ -78,7 +78,7 @@ public class PostRepository {
     }
 
 
-    public String updatePost(Posts posts, Long id){
+    public String updatePost(Posts posts, int id){
 
         if(posts.getUser_id() == 0 || posts.getContent() == null || posts.getTitle() == null) return "Invalid data";
 

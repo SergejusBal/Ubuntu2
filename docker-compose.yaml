@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   spring-app:
-    image: sha256:92d93a7dca41e75681995af1c941b001195ba7f878412266e390c0a6072ef83f
+    image: sha256:3baf0cfb3c15dce3e216c14c0c06edbce08088d4e5477723ca1c4ab147b96b79
     build: .
     ports:
       - "8080:8080"

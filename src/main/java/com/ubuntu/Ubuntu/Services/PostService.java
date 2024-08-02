@@ -25,7 +25,7 @@ public class PostService {
         return postRepository.getPostById(id);
     }
 
-    public String updatePost(Posts posts, Long id){
+    public String updatePost(Posts posts, int id){
         return postRepository.updatePost(posts, id);
     }
 
