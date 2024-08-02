@@ -128,7 +128,7 @@ public class UserReposiroty {
 
     public String deletePostById(int id){
 
-        String sql = "DELETE FROM posts WHERE id = ?;";
+        String sql = "DELETE FROM posts WHERE user_id = ?;";
 
         try {
             Connection connection = DriverManager.getConnection(url, username, password);

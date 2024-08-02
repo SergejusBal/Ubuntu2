@@ -1,9 +1,7 @@
 package com.ubuntu.Ubuntu.Controllers;
 
 import com.ubuntu.Ubuntu.Models.Posts;
-import com.ubuntu.Ubuntu.Models.User;
 import com.ubuntu.Ubuntu.Services.PostService;
-import com.ubuntu.Ubuntu.Services.UserServive;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
